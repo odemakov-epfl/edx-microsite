@@ -94,3 +94,5 @@ paver devstack lms [--fast]
 paver devstack studio [--fast]
 
 ```
+
+- Open site http://edx-test.phzh.ch.localhost:8000/courses
