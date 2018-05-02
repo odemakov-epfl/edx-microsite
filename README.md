@@ -22,13 +22,11 @@ cd sms-microsite
 vagrant up
 ```
 
--- Set up microsite
+- Login to VM
 
 ```
 vagrant ssh
 sudo su edxapp
-paver devstack lms [--fast]
-paver devstack studio [--fast]
 ```
 
 - Edit file /edx/app/edxapp/lms.env.json
@@ -86,4 +84,13 @@ paver devstack studio [--fast]
             "course_email_from_addr": "foo@edx.com",
             "SESSION_COOKIE_DOMAIN": "foo.localhost"
         }
+```
+
+- Start LMS/CMS under edxapp user
+
+```
+
+paver devstack lms [--fast]
+paver devstack studio [--fast]
+
 ```
