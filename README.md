@@ -3,6 +3,7 @@
 - Create working directory, checkout this repo and edx-microsite
 
 
+Commit from Oleg
 ```
 mkdir ~/some-folder
 cd ~/some-folder
