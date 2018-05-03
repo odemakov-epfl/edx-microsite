@@ -2,6 +2,7 @@
 
 - Create working directory, checkout this repo and edx-microsite
 
+
 ```
 mkdir ~/some-folder
 cd ~/some-folder
