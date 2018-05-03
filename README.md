@@ -29,6 +29,12 @@ vagrant ssh
 sudo su edxapp
 ```
 
+- Add admin user
+
+```
+/edx/bin/python.edxapp /edx/app/edxapp/edx-platform/manage.py lms --settings=devstack createsuperuser --username admin
+```
+
 - Edit file /edx/app/edxapp/lms.env.json
 
 ```
@@ -61,7 +67,9 @@ sudo su edxapp
             "email_from_address": "noreply@epfl.ch",
             "homepage_overlay_html": "<h1>PHZH Moocs</h1><h2>For anyone, anywhere, anytime and here</h2>",
             "show_homepage_promo_video": false,
-            "show_partners": false
+            "show_partners": false,
+            "css_overrides_file":  "edx-test.phzh.ch/css/style.css",
+            "favicon_path": "edx-test.phzh.ch/images/favicon.ico"
         },
         "foo": {
             "domain_prefix": "foo",
@@ -95,4 +103,4 @@ paver devstack studio [--fast]
 
 ```
 
-- Open site http://edx-test.phzh.ch.localhost:8000/courses
+- Open site http://edx-test.phzh.ch.localhost:8000/
