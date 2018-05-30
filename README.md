@@ -38,8 +38,18 @@ sudo su edxapp
 - Edit file /edx/app/edxapp/lms.env.json
 
 ```
-"FEATURES": {
-    "USE_MICROSITES": true
+    "FEATURES": {
+        "USE_MICROSITES": true
+```
+
+```
+    "ENABLE_COMPREHENSIVE_THEMING": true
+```
+
+```
+    "COMPREHENSIVE_THEME_DIRS": [
+        "/edx/var/edx-themes/edx-themes/edx-platform"
+    ],
 ```
 
 ```

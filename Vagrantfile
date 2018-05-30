@@ -29,18 +29,18 @@ VERSION_VARS = [
 
 MOUNT_DIRS = {
   :edx_platform => {:repo => "edx-platform", :local => "/edx/app/edxapp/edx-platform", :owner => "edxapp"},
-  :themes => {:repo => "themes", :local => "/edx/app/edxapp/themes", :owner => "edxapp"},
+  #:themes => {:repo => "edx-themes", :local => "/edx/app/edxapp/themes", :owner => "edxapp"},
   :forum => {:repo => "cs_comments_service", :local => "/edx/app/forum/cs_comments_service", :owner => "forum"},
   :ecommerce => {:repo => "ecommerce", :local => "/edx/app/ecommerce/ecommerce", :owner => "ecommerce"},
   :ecommerce_worker => {:repo => "ecommerce-worker", :local => "/edx/app/ecommerce_worker/ecommerce_worker", :owner => "ecommerce_worker"},
   # This src directory won't have useful permissions. You can set them from the
   # vagrant user in the guest OS. "sudo chmod 0777 /edx/src" is useful.
-  :src => {:repo => "src", :local => "/edx/src", :owner => "root"},
+  #:src => {:repo => "src", :local => "/edx/src", :owner => "root"},
 
   # EPFL specific
-  :epflstack => {:repo => "../../", :local => "/edx/var/epflstack/", :owner => "vagrant"},
+  #:epflstack => {:repo => "../../", :local => "/edx/var/epflstack/", :owner => "vagrant"},
   # Mappings of the {{ epfl_custom_repositories }} var
-  :epfl_themes => {:repo => "../../src/themes", :local => "/edx/var/edx-themes/edx-themes/edx-platform", :owner => "edxapp"},
+  :epfl_themes => {:repo => "../../src/edx-themes", :local => "/edx/var/edx-themes/edx-themes", :owner => "edxapp"},
   :microsites => {:repo => "../../src/edx-microsite", :local => "/edx/app/edxapp/edx-microsite", :owner => "edxapp"},
 }
 if ENV['VAGRANT_MOUNT_BASE']
